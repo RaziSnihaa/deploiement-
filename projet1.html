@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 - Application Web Moderne | Razi Sniha</title>
+    <meta name="description" content="Découvrez en détail mon projet d'application web moderne développée avec React et Node.js">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-page.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Razi Sniha</a>
+            </div>
+            <div class="nav-back">
+                <a href="index.html#projects" class="btn-back">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour au portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <div class="project-breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>/</span>
+                <a href="index.html#projects">Projets</a>
+                <span>/</span>
+                <span>Application Web Moderne</span>
+            </div>
+            <h1 class="project-title">Application Web Moderne</h1>
+            <p class="project-subtitle">Une application web responsive et performante développée avec les dernières technologies</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Octobre 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>3 mois de développement</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>Projet personnel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Video -->
+    <section class="project-video">
+        <div class="container">
+            <div class="video-container">
+                <!-- Placeholder vidéo avec image de démonstration -->
+                <div class="video-placeholder" id="video-placeholder">
+                    <img src="images/Capture.PNG" alt="Aperçu du projet" class="video-poster">
+                    <div class="video-overlay">
+                        <div class="play-button" id="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Démonstration du Projet</h3>
+                        <p>Cliquez pour voir une présentation interactive</p>
+                    </div>
+                </div>
+                
+                <!-- Vidéo réelle (cachée par défaut) -->
+                <video id="project-video" controls poster="images/project1.jpg" style="display: none;">
+                    <source src="videos/projet1-demo.mp4" type="video/mp4">
+                    <source src="videos/projet1-demo.webm" type="video/webm">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+                
+                <!-- Modal de démonstration -->
+                <div id="demo-modal" class="demo-modal" style="display: none;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Démonstration Interactive</h3>
+                            <button class="close-modal" id="close-modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="demo-features">
+                                <div class="demo-feature active" data-feature="home">
+                                    <h4>🏠 Page d'Accueil</h4>
+                                    <p>Interface moderne avec navigation intuitive et design responsive.</p>
+                                    <div class="feature-preview">
+                                        <img src="images/Capture.PNG" alt="Page d'accueil" class="feature-img">
+                                    </div>
+                                </div>
+                                <div class="demo-feature" data-feature="dashboard">
+                                    <h4>📊 Tableau de Bord</h4>
+                                    <p>Analytics en temps réel avec graphiques interactifs et métriques clés.</p>
+                                    <div class="feature-preview">
+                                        <div class="placeholder-chart">
+                                            <div class="chart-bar" style="height: 60%"></div>
+                                            <div class="chart-bar" style="height: 80%"></div>
+                                            <div class="chart-bar" style="height: 45%"></div>
+                                            <div class="chart-bar" style="height: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-feature" data-feature="mobile">
+                                    <h4>📱 Version Mobile</h4>
+                                    <p>Optimisée pour tous les appareils avec interface touch-friendly.</p>
+                                    <div class="feature-preview mobile-preview">
+                                        <div class="mobile-screen">
+                                            <div class="mobile-header"></div>
+                                            <div class="mobile-content"></div>
+                                            <div class="mobile-nav"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-feature" data-feature="features">
+                                    <h4>⚡ Fonctionnalités</h4>
+                                    <p>Authentification, gestion des données, notifications en temps réel.</p>
+                                    <div class="feature-preview">
+                                        <div class="features-list">
+                                            <div class="feature-item">✓ Authentification sécurisée</div>
+                                            <div class="feature-item">✓ Base de données optimisée</div>
+                                            <div class="feature-item">✓ API REST complète</div>
+                                            <div class="feature-item">✓ Tests automatisés</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-navigation">
+                                <button class="demo-nav-btn" data-target="home">Accueil</button>
+                                <button class="demo-nav-btn" data-target="dashboard">Dashboard</button>
+                                <button class="demo-nav-btn" data-target="mobile">Mobile</button>
+                                <button class="demo-nav-btn" data-target="features">Fonctionnalités</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="video-caption">Démonstration interactive du projet avec toutes ses fonctionnalités principales</p>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Description principale -->
+                <div class="main-content">
+                    <h2>À propos du projet</h2>
+                    <p class="lead">
+                        Cette application web moderne représente l'aboutissement de plusieurs mois de développement 
+                        avec pour objectif de créer une solution complète, performante et accessible.
+                    </p>
+                    
+                    <h3>Objectifs du projet</h3>
+                    <ul class="objectives-list">
+                        <li>Créer une interface utilisateur moderne et intuitive</li>
+                        <li>Développer une architecture backend robuste et scalable</li>
+                        <li>Implémenter des fonctionnalités avancées de gestion des données</li>
+                        <li>Assurer une performance optimale sur tous les appareils</li>
+                        <li>Respecter les meilleures pratiques de sécurité</li>
+                    </ul>
+
+                    <h3>Fonctionnalités principales</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h4>Authentification sécurisée</h4>
+                            <p>Système complet d'authentification avec JWT, validation des données et protection CSRF.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>Gestion des données</h4>
+                            <p>Base de données optimisée avec MongoDB, requêtes efficaces et cache intelligente.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Design responsive</h4>
+                            <p>Interface adaptative qui fonctionne parfaitement sur desktop, tablette et mobile.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Performance optimisée</h4>
+                            <p>Chargement rapide, lazy loading, optimisation des images et mise en cache.</p>
+                        </div>
+                    </div>
+
+                    <h3>Défis techniques rencontrés</h3>
+                    <div class="challenges">
+                        <div class="challenge-item">
+                            <h4>Gestion de l'état complexe</h4>
+                            <p>
+                                Implémentation d'une architecture Redux pour gérer l'état global de l'application 
+                                avec de multiples composants interconnectés.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h4>Optimisation des performances</h4>
+                            <p>
+                                Mise en place de techniques avancées comme le code splitting, 
+                                la mise en cache intelligente et l'optimisation des requêtes.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h4>Sécurité des données</h4>
+                            <p>
+                                Implémentation de mesures de sécurité robustes incluant la validation côté serveur, 
+                                le chiffrement des données sensibles et la protection contre les attaques courantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Résultats et impact</h3>
+                    <div class="results">
+                        <div class="result-stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Score de performance</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Accessibilité</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfaction utilisateur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar technique -->
+                <div class="sidebar">
+                    <div class="tech-stack">
+                        <h3>Technologies utilisées</h3>
+                        <div class="tech-category">
+                            <h4>Frontend</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React 18</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Redux Toolkit</span>
+                                <span class="tech-tag">React Router</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Backend</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Mongoose</span>
+                                <span class="tech-tag">JWT</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Outils</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">ESLint</span>
+                                <span class="tech-tag">Prettier</span>
+                                <span class="tech-tag">Jest</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Liens du projet</h3>
+                        <a href="#" class="project-link-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Voir le site en ligne
+                        </a>
+                        <a href="https://github.com/razi773/WattUP" class="project-link-btn" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Code source GitHub
+                        </a>
+                        <a href="#" class="project-link-btn" target="_blank">
+                            <i class="fas fa-file-alt"></i>
+                            Documentation technique
+                        </a>
+                    </div>
+
+                    <div class="project-stats">
+                        <h3>Statistiques</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Lignes de code</span>
+                            <span class="stat-value">15,000+</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Composants React</span>
+                            <span class="stat-value">45</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tests unitaires</span>
+                            <span class="stat-value">120+</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Couverture de test</span>
+                            <span class="stat-value">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>Captures d'écran</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/projet1-screen1.jpg" alt="Page d'accueil" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <h4>Page d'accueil</h4>
+                        <p>Interface principale avec dashboard</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/projet1-screen2.jpg" alt="Tableau de bord" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <h4>Tableau de bord</h4>
+                        <p>Analytics et statistiques en temps réel</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/projet1-screen3.jpg" alt="Interface mobile" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <h4>Version mobile</h4>
+                        <p>Optimisée pour tous les appareils</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/projet1-screen4.jpg" alt="Gestion des données" loading="lazy">
+                    <div class="screenshot-overlay">
+                        <h4>Gestion des données</h4>
+                        <p>Interface d'administration complète</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next/Previous Projects -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-projects">
+                <div class="nav-project prev disabled">
+                    <div class="nav-content">
+                        <span class="nav-label">Aucun projet précédent</span>
+                        <h3>-</h3>
+                    </div>
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <a href="index.html#projects" class="nav-project center">
+                    <i class="fas fa-th"></i>
+                    <span>Tous les projets</span>
+                </a>
+                <a href="projet2.html" class="nav-project next">
+                    <i class="fas fa-arrow-right"></i>
+                    <div class="nav-content">
+                        <span class="nav-label">Projet suivant</span>
+                        <h3>Site Dyslexia</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Razi Sniha. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="index.html#about">À propos</a>
+                    <a href="index.html#projects">Projets</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/project-page-new.js"></script>
+</body>
+</html>
