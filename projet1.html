@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 1 - Application Web Moderne | Razi Sniha</title>
-    <meta name="description" content="Découvrez en détail mon projet d'application web moderne développée avec React et Node.js">
+    <title>Projet 1 - Plateforme d'aide pour la dyslexie | Razi Sniha</title>
+    <meta name="description" content="Plateforme éducative avec Face Login, jeux pour enfants dyslexiques, modules TTS/ASR, reconnaissance d'écriture et tableau de bord Power BI.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,10 +42,10 @@
                 <span>/</span>
                 <a href="index.html#projects">Projets</a>
                 <span>/</span>
-                <span>Application Web Moderne</span>
+                <span>Plateforme d'aide pour la dyslexie</span>
             </div>
-            <h1 class="project-title">Application Web Moderne</h1>
-            <p class="project-subtitle">Une application web responsive et performante développée avec les dernières technologies</p>
+            <h1 class="project-title">Plateforme d'aide pour la dyslexie</h1>
+            <p class="project-subtitle">Face Login, jeux éducatifs, traitement texte/voix, reconnaissance d'écriture et tableau de bord Power BI</p>
             <div class="project-meta">
                 <div class="meta-item">
                     <i class="fas fa-calendar"></i>
@@ -164,72 +164,88 @@
                 <div class="main-content">
                     <h2>À propos du projet</h2>
                     <p class="lead">
-                        Cette application web moderne représente l'aboutissement de plusieurs mois de développement 
-                        avec pour objectif de créer une solution complète, performante et accessible.
+                        Cette plateforme vise à accompagner les enfants atteints de dyslexie via des outils technologiques :
+                        expérience de connexion par reconnaissance faciale, jeux éducatifs adaptés, modules de traitement
+                        texte-voix et voix-texte, génération d'images segmentées, reconnaissance d'écriture manuscrite et
+                        tableau de bord pour les parents (Power BI).
                     </p>
-                    
+
                     <h3>Objectifs du projet</h3>
                     <ul class="objectives-list">
-                        <li>Créer une interface utilisateur moderne et intuitive</li>
-                        <li>Développer une architecture backend robuste et scalable</li>
-                        <li>Implémenter des fonctionnalités avancées de gestion des données</li>
-                        <li>Assurer une performance optimale sur tous les appareils</li>
-                        <li>Respecter les meilleures pratiques de sécurité</li>
+                        <li>Faciliter l'accès aux ressources éducatives pour les enfants dyslexiques</li>
+                        <li>Proposer des outils interactifs (jeux, écriture virtuelle, TTS/ASR)</li>
+                        <li>Mesurer et visualiser la progression via un dashboard Power BI</li>
+                        <li>Support multilingue pour toucher un public international</li>
+                        <li>Créer une expérience utilisateur sécurisée et accessible (Face Login)</li>
                     </ul>
 
                     <h3>Fonctionnalités principales</h3>
                     <div class="features-grid">
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-user-shield"></i>
+                                <i class="fas fa-user-check"></i>
                             </div>
-                            <h4>Authentification sécurisée</h4>
-                            <p>Système complet d'authentification avec JWT, validation des données et protection CSRF.</p>
+                            <h4>Face Login</h4>
+                            <p>Connexion simplifiée et sécurisée via reconnaissance faciale pour un accès rapide des enfants.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-database"></i>
+                                <i class="fas fa-gamepad"></i>
                             </div>
-                            <h4>Gestion des données</h4>
-                            <p>Base de données optimisée avec MongoDB, requêtes efficaces et cache intelligente.</p>
+                            <h4>Jeux éducatifs</h4>
+                            <p>Jeux conçus pour améliorer la lecture, la phonologie et la mémoire chez les enfants dyslexiques.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-microphone"></i>
                             </div>
-                            <h4>Design responsive</h4>
-                            <p>Interface adaptative qui fonctionne parfaitement sur desktop, tablette et mobile.</p>
+                            <h4>Text-to-Voice & Voice-to-Text</h4>
+                            <p>Modules de synthèse vocale et de reconnaissance vocale pour faciliter la lecture et la production écrite.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-rocket"></i>
+                                <i class="fas fa-pen-nib"></i>
                             </div>
-                            <h4>Performance optimisée</h4>
-                            <p>Chargement rapide, lazy loading, optimisation des images et mise en cache.</p>
+                            <h4>Reconnaissance d'écriture</h4>
+                            <p>Écrire sur un tableau virtuel et convertir l'écriture manuscrite en texte exploitable.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h4>Support multilingue</h4>
+                            <p>Contenu disponible en plusieurs langues pour une portée internationale.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Dashboard Power BI</h4>
+                            <p>Espace parental avec statistiques et insights sur la progression des enfants (Power BI).</p>
                         </div>
                     </div>
 
                     <h3>Défis techniques rencontrés</h3>
                     <div class="challenges">
                         <div class="challenge-item">
-                            <h4>Gestion de l'état complexe</h4>
+                            <h4>Traitement multimodal</h4>
                             <p>
-                                Implémentation d'une architecture Redux pour gérer l'état global de l'application 
-                                avec de multiples composants interconnectés.
+                                Intégrer plusieurs pipelines ML (TTS, ASR, OCR manuscrit, détection d'objets) et
+                                garantir des performances en temps réel pour une expérience fluide.
                             </p>
                         </div>
                         <div class="challenge-item">
-                            <h4>Optimisation des performances</h4>
+                            <h4>Qualité des modèles</h4>
                             <p>
-                                Mise en place de techniques avancées comme le code splitting, 
-                                la mise en cache intelligente et l'optimisation des requêtes.
+                                Entraîner et déployer des modèles de deep learning robustes pour la reconnaissance
+                                d'écriture et la synthèse vocale multi-langue.
                             </p>
                         </div>
                         <div class="challenge-item">
-                            <h4>Sécurité des données</h4>
+                            <h4>Confidentialité et sécurité</h4>
                             <p>
-                                Implémentation de mesures de sécurité robustes incluant la validation côté serveur, 
-                                le chiffrement des données sensibles et la protection contre les attaques courantes.
+                                Protéger les données sensibles des enfants, notamment les images faciales et les
+                                enregistrements vocaux, en respectant la réglementation et en appliquant le chiffrement.
                             </p>
                         </div>
                     </div>
@@ -237,16 +253,16 @@
                     <h3>Résultats et impact</h3>
                     <div class="results">
                         <div class="result-stat">
-                            <div class="stat-number">95%</div>
-                            <div class="stat-label">Score de performance</div>
+                            <div class="stat-number">Amélioration notable</div>
+                            <div class="stat-label">Compétences de lecture</div>
                         </div>
                         <div class="result-stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Accessibilité</div>
+                            <div class="stat-number">+150%</div>
+                            <div class="stat-label">Engagement avec les jeux éducatifs</div>
                         </div>
                         <div class="result-stat">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Satisfaction utilisateur</div>
+                            <div class="stat-number">Dashboards</div>
+                            <div class="stat-label">Analyses Power BI pour les parents</div>
                         </div>
                     </div>
                 </div>
@@ -258,31 +274,31 @@
                         <div class="tech-category">
                             <h4>Frontend</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">React 18</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">Redux Toolkit</span>
-                                <span class="tech-tag">React Router</span>
+                                <span class="tech-tag">Django (Frontend & Backend)</span>
+                                <span class="tech-tag">HTML5 / CSS3 / JavaScript</span>
+                                <span class="tech-tag">Power BI (Tableau de bord)</span>
+                                <span class="tech-tag">Machine Learning / Deep Learning</span>
+                                <span class="tech-tag">NLP & Speech Processing</span>
                             </div>
                         </div>
                         <div class="tech-category">
-                            <h4>Backend</h4>
+                            <h4>Backend & ML</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Mongoose</span>
-                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">TensorFlow / PyTorch</span>
+                                <span class="tech-tag">OpenCV (vision)</span>
+                                <span class="tech-tag">Speech SDKs (ASR/TTS)</span>
+                                <span class="tech-tag">PostgreSQL</span>
                             </div>
                         </div>
                         <div class="tech-category">
-                            <h4>Outils</h4>
+                            <h4>Outils & Data Viz</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">Vite</span>
-                                <span class="tech-tag">ESLint</span>
-                                <span class="tech-tag">Prettier</span>
-                                <span class="tech-tag">Jest</span>
+                                <span class="tech-tag">Power BI</span>
                                 <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Git & CI/CD</span>
+                                <span class="tech-tag">Azure / AWS</span>
+                                <span class="tech-tag">GitHub</span>
                             </div>
                         </div>
                     </div>
