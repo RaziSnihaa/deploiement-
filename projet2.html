@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 2 - Site Dyslexia | Razi Sniha</title>
-    <meta name="description" content="Découvrez en détail le site Dyslexia, un projet dédié à la sensibilisation et au soutien des personnes atteintes de dyslexie">
+    <title>Graph Knowledge System — GNN & LLMs | Razi Sniha</title>
+    <meta name="description" content="Graph Knowledge System : combinaison de LLMs (GPT-4 Mini), GNN (GraphSAGE, GAT) et RAG pour la gestion des risques de projet et recommandations intelligentes.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,10 +42,10 @@
                 <span>/</span>
                 <a href="index.html#projects">Projets</a>
                 <span>/</span>
-                <span>Site Dyslexia</span>
+                <span>Graph Knowledge System</span>
             </div>
-            <h1 class="project-title">Site Dyslexia</h1>
-            <p class="project-subtitle">Site web dédié à la sensibilisation et au soutien des personnes atteintes de dyslexie</p>
+            <h1 class="project-title">Graph Knowledge System — GNN & LLMs</h1>
+            <p class="project-subtitle">Système de connaissance graphique alliant LLMs (GPT-4 Mini), GNNs et RAG pour la gestion de risques de projet</p>
             <div class="project-meta">
                 <div class="meta-item">
                     <i class="fas fa-calendar"></i>
@@ -164,48 +164,59 @@
                 <div class="main-content">
                     <h2>À propos du projet</h2>
                     <p class="lead">
-                        Ce site web représente un projet personnel important dédié à la sensibilisation 
-                        et au soutien des personnes atteintes de dyslexie, offrant des ressources éducatives et des outils pratiques.
+                        🚀 End of Year Project: Graph Knowledge System with LLMs and GNN Models 🎉
+                        En collaboration avec Chaima Takali, Asma Frikha, Razi Sniha, Manai Seif et Zeineb Maatoug,
+                        supervisé par Madam Wiem Zaouga, nous avons conçu un système combinant LLMs (GPT-4 Mini),
+                        Graph Neural Networks et un moteur de recommandations RAG pour améliorer l'analyse et la
+                        gestion des risques de projet.
                     </p>
-                    
-                    <h3>Objectifs du projet</h3>
-                    <ul class="objectives-list">
-                        <li>Sensibiliser le public à la dyslexie et ses impacts</li>
-                        <li>Fournir des ressources éducatives accessibles</li>
-                        <li>Développer des outils d'aide pour les apprentissages</li>
-                        <li>Créer une communauté de soutien</li>
-                        <li>Promouvoir l'inclusion et la diversité</li>
-                    </ul>
+
+                    <h3>Ce que fait le projet</h3>
+                    <p>
+                        Le système extrait des données depuis le PMI Standard Book et PMBOK 6 à l'aide de GPT-4 Mini
+                        pour construire un graphe de connaissance initial. Les GNN (GAT, GraphSAGE) entraînés avec
+                        PyTorch réalisent la classification de nœuds (ex. niveaux de risque) et la prédiction de liens.
+                    </p>
+
+                    <h3>Use case</h3>
+                    <p>
+                        Dans l'application Django, l'utilisateur saisit la description d'un projet ; le LLM génère
+                        un graphe, traité par GraphSAGE pour la classification et la prédiction de liens. Le résultat
+                        est une interface visuelle permettant d'identifier risques, dépendances et recommandations.
+                    </p>
+
+                    <h3>Recommendation System (RAG)</h3>
+                    <p>
+                        Un système RAG indexe les documents avec Pinecone et fournit des recommandations contextualisées
+                        basées sur la situation projet via la combinaison recherche + génération (LLM).
+                    </p>
 
                     <h3>Fonctionnalités principales</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <h4>Ressources éducatives</h4>
-                            <p>Articles, guides et tutoriels sur la dyslexie, adaptés aux différents niveaux de compréhension.</p>
+                            <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                            <h4>Extraction & Construction de Graphes</h4>
+                            <p>Extraction automatique depuis PMBOK & PMI, création du knowledge graph via GPT-4 Mini.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h4>Outils d'aide</h4>
-                            <p>Applications et outils pratiques pour faciliter l'apprentissage et la lecture.</p>
+                            <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h4>GNN pour classification</h4>
+                            <p>GraphSAGE et GAT pour la classification de nœuds (identification de risques).</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4>Communauté</h4>
-                            <p>Espace d'échange et de soutien entre personnes concernées et professionnels.</p>
+                            <div class="feature-icon"><i class="fas fa-link"></i></div>
+                            <h4>Link Prediction</h4>
+                            <p>Prédiction de relations entre éléments de projet pour anticiper dépendances et impacts.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h4>Tests et diagnostics</h4>
-                            <p>Outils d'auto-évaluation et d'orientation vers des professionnels de santé.</p>
+                            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                            <h4>RAG + Recommandations</h4>
+                            <p>RAG (Pinecone) fournit des recommandations pratiques et contextualisées aux utilisateurs.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-chart-area"></i></div>
+                            <h4>Interface Django</h4>
+                            <p>Interface web sécurisée pour visualiser le graphe, naviguer les risques et appliquer recommandations.</p>
                         </div>
                     </div>
 
@@ -255,35 +266,32 @@
                 <div class="sidebar">
                     <div class="tech-stack">
                         <h3>Technologies utilisées</h3>
-                        <div class="tech-category">
-                            <h4>Frontend</h4>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Vue.js 3</span>
-                                <span class="tech-tag">Vuex</span>
-                                <span class="tech-tag">SCSS</span>
-                                <span class="tech-tag">Axios</span>
-                                <span class="tech-tag">Vue Router</span>
+                            <div class="tech-category">
+                                <h4>LLMs & Indexing</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">GPT-4 Mini</span>
+                                    <span class="tech-tag">Pinecone</span>
+                                    <span class="tech-tag">RAG</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Backend</h4>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express.js</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Sequelize</span>
-                                <span class="tech-tag">JWT</span>
+                            <div class="tech-category">
+                                <h4>Graph & ML</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">PyTorch</span>
+                                    <span class="tech-tag">GraphSAGE</span>
+                                    <span class="tech-tag">GAT</span>
+                                    <span class="tech-tag">GNN</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Accessibilité</h4>
-                            <div class="tech-tags">
-                                <span class="tech-tag">WCAG 2.1</span>
-                                <span class="tech-tag">Polices adaptées</span>
-                                <span class="tech-tag">Contraste élevé</span>
-                                <span class="tech-tag">Navigation simplifiée</span>
+                            <div class="tech-category">
+                                <h4>Backend & Infra</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">PostgreSQL / MongoDB</span>
+                                    <span class="tech-tag">Git & CI/CD</span>
+                                </div>
                             </div>
-                        </div>
                     </div>
 
                     <div class="project-links">
