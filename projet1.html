@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 1 - Plateforme d'aide pour la dyslexie | Razi Sniha</title>
-    <meta name="description" content="Plateforme éducative avec Face Login, jeux pour enfants dyslexiques, modules TTS/ASR, reconnaissance d'écriture et tableau de bord Power BI.">
+    <title>NeuroWatts — Projet de Fin d'Études | Razi Sniha</title>
+    <meta name="description" content="NeuroWatts : plateforme intelligente de monitoring énergétique (XGBoost, RAG+LLM, AutoEncoder, MobileNetV2, Django, MongoDB, Docker).">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,10 +42,10 @@
                 <span>/</span>
                 <a href="index.html#projects">Projets</a>
                 <span>/</span>
-                <span>Plateforme d'aide pour la dyslexie</span>
+                <span>NeuroWatts</span>
             </div>
-            <h1 class="project-title">Plateforme d'aide pour la dyslexie</h1>
-            <p class="project-subtitle">Face Login, jeux éducatifs, traitement texte/voix, reconnaissance d'écriture et tableau de bord Power BI</p>
+            <h1 class="project-title">NeuroWatts — Projet de Fin d'Études</h1>
+            <p class="project-subtitle">Plateforme intelligente de monitoring énergétique — XGBoost, RAG+LLM, AutoEncoder, MobileNetV2</p>
             <div class="project-meta">
                 <div class="meta-item">
                     <i class="fas fa-calendar"></i>
@@ -82,11 +82,11 @@
                 </div>
                 
                 <!-- Vidéo réelle (cachée par défaut) -->
-                <video id="project-video" controls poster="images/project1.jpg" style="display: none;">
-                    <source src="videos/projet1-demo.mp4" type="video/mp4">
-                    <source src="videos/projet1-demo.webm" type="video/webm">
-                    Votre navigateur ne supporte pas les vidéos HTML5.
-                </video>
+                    <video id="project-video" controls poster="images/Capture.PNG" style="display: none;">
+                        <source src="videos/projet1-demo.mp4" type="video/mp4">
+                        <source src="videos/projet1-demo.webm" type="video/webm">
+                        Votre navigateur ne supporte pas les vidéos HTML5.
+                    </video>
                 
                 <!-- Modal de démonstration -->
                 <div id="demo-modal" class="demo-modal" style="display: none;">
@@ -164,64 +164,55 @@
                 <div class="main-content">
                     <h2>À propos du projet</h2>
                     <p class="lead">
-                        Cette plateforme vise à accompagner les enfants atteints de dyslexie via des outils technologiques :
-                        expérience de connexion par reconnaissance faciale, jeux éducatifs adaptés, modules de traitement
-                        texte-voix et voix-texte, génération d'images segmentées, reconnaissance d'écriture manuscrite et
-                        tableau de bord pour les parents (Power BI).
+                        🎓 Clôture d’un projet marquant : mon Projet de Fin d’Études – “NeuroWatts” ⚡
+                        Après plusieurs mois de recherche, d’expérimentation et de passion, je suis fier de présenter
+                        NeuroWatts, une plateforme intelligente et centralisée de monitoring énergétique conçue pour
+                        révolutionner la gestion de la consommation dans les environnements industriels.
                     </p>
 
-                    <h3>Objectifs du projet</h3>
+                    <h3>Que fait NeuroWatts ?</h3>
+                    <p>
+                        C’est une solution web unifiée capable de :
+                    </p>
                     <ul class="objectives-list">
-                        <li>Faciliter l'accès aux ressources éducatives pour les enfants dyslexiques</li>
-                        <li>Proposer des outils interactifs (jeux, écriture virtuelle, TTS/ASR)</li>
-                        <li>Mesurer et visualiser la progression via un dashboard Power BI</li>
-                        <li>Support multilingue pour toucher un public international</li>
-                        <li>Créer une expérience utilisateur sécurisée et accessible (Face Login)</li>
+                        <li>🔹 Prédire la consommation future grâce à des modèles avancés XGBoost</li>
+                        <li>🔹 Détecter et expliquer automatiquement les anomalies énergétiques via un module RAG + LLM et AutoEncoder</li>
+                        <li>🔹 Analyser les images industrielles avec MobileNetV2 pour identifier défauts visuels liés aux pics</li>
+                        <li>🔹 Offrir une interface web sécurisée (Django, reconnaissance faciale, MFA) avec des dashboards intuitifs</li>
+                        <li>🔹 Gérer les données via MongoDB et une architecture Dockerisée, déployable localement ou sur le cloud</li>
                     </ul>
 
                     <h3>Fonctionnalités principales</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <h4>Face Login</h4>
-                            <p>Connexion simplifiée et sécurisée via reconnaissance faciale pour un accès rapide des enfants.</p>
+                            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                            <h4>Prédiction (XGBoost)</h4>
+                            <p>Modèles de forecasting pour estimer la consommation future et améliorer la planification énergétique.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-gamepad"></i>
-                            </div>
-                            <h4>Jeux éducatifs</h4>
-                            <p>Jeux conçus pour améliorer la lecture, la phonologie et la mémoire chez les enfants dyslexiques.</p>
+                            <div class="feature-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <h4>Détection & explication d'anomalies</h4>
+                            <p>Pipeline RAG + LLM et AutoEncoder pour détecter et expliquer automatiquement les écarts.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-microphone"></i>
-                            </div>
-                            <h4>Text-to-Voice & Voice-to-Text</h4>
-                            <p>Modules de synthèse vocale et de reconnaissance vocale pour faciliter la lecture et la production écrite.</p>
+                            <div class="feature-icon"><i class="fas fa-image"></i></div>
+                            <h4>Analyse d'images (MobileNetV2)</h4>
+                            <p>Inspection visuelle des équipements pour corréler anomalies visuelles et événements énergétiques.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-pen-nib"></i>
-                            </div>
-                            <h4>Reconnaissance d'écriture</h4>
-                            <p>Écrire sur un tableau virtuel et convertir l'écriture manuscrite en texte exploitable.</p>
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Sécurité & Authentification</h4>
+                            <p>Accès sécurisé avec Django, reconnaissance faciale et MFA pour les utilisateurs critiques.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <h4>Support multilingue</h4>
-                            <p>Contenu disponible en plusieurs langues pour une portée internationale.</p>
+                            <div class="feature-icon"><i class="fas fa-database"></i></div>
+                            <h4>Stockage & Orchestration</h4>
+                            <p>MongoDB pour la gestion des séries temporelles et Docker pour un déploiement reproductible.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h4>Dashboard Power BI</h4>
-                            <p>Espace parental avec statistiques et insights sur la progression des enfants (Power BI).</p>
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Dashboards</h4>
+                            <p>Dashboards interactifs et reporting pour opérateurs et managers.</p>
                         </div>
                     </div>
 
@@ -285,10 +276,11 @@
                             <h4>Backend & ML</h4>
                             <div class="tech-tags">
                                 <span class="tech-tag">Django</span>
-                                <span class="tech-tag">TensorFlow / PyTorch</span>
-                                <span class="tech-tag">OpenCV (vision)</span>
-                                <span class="tech-tag">Speech SDKs (ASR/TTS)</span>
-                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">XGBoost</span>
+                                <span class="tech-tag">AutoEncoder</span>
+                                <span class="tech-tag">RAG + LLM</span>
+                                <span class="tech-tag">MobileNetV2 / OpenCV</span>
+                                <span class="tech-tag">MongoDB</span>
                             </div>
                         </div>
                         <div class="tech-category">
