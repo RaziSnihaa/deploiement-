@@ -1,0 +1,97 @@
+/* ===================================
+   🔧 CORRECTIONS RAPIDES
+   Fixes pour affichage du texte
+   =================================== */
+
+/* Forcer l'affichage du texte dans le hero */
+.hero-title,
+.hero-subtitle,
+.highlight,
+.typing-effect {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+}
+
+/* S'assurer que le texte est lisible */
+.hero-title {
+    color: #ffffff !important;
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 40px !important;
+}
+
+/* Désactiver les effets qui cachent le texte */
+.typing-effect {
+    overflow: visible !important;
+    border-right: none !important;
+    animation: none !important;
+    white-space: normal !important;
+}
+
+/* Glitch plus subtil */
+.glitch {
+    animation: none !important;
+}
+
+.glitch::before,
+.glitch::after {
+    opacity: 0.2 !important;
+}
+
+/* Assurer que le gradient est visible */
+.highlight {
+    background: linear-gradient(45deg, #ffffff, #e0e0e0) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 700 !important;
+}
+
+/* Correction pour les boutons */
+.hero-buttons {
+    display: flex !important;
+    gap: 20px !important;
+    margin-top: 30px !important;
+}
+
+.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* S'assurer que tout le contenu hero est visible */
+.hero-content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+}
+
+.hero-content * {
+    visibility: visible !important;
+}
+
+/* Correction pour mobile */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ===================================
+   HOVER EFFECT - COMPÉTENCES
+   Pas de override pour permettre le thème moderne
+   =================================== */

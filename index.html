@@ -16,6 +16,16 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-modern.css">
+    <link rel="stylesheet" href="css/theme-modern-colors.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/hero-enhancements.css">
+    <link rel="stylesheet" href="css/fix-display.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="css/contact-modern.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+    <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -32,38 +42,114 @@
                     <a href="#about" class="nav-link">À propos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projets</a>
+                    <a href="#skills" class="nav-link">Compétences</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Compétences</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projets</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" type="button">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Canvas pour particules -->
+        <canvas id="particles-canvas"></canvas>
+        
+        <!-- Effet Matrix Background -->
+        <canvas id="matrix-canvas"></canvas>
+        
         <div class="hero-container">
             <div class="hero-content">
+                <!-- Badge de statut -->
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Disponible pour des opportunités</span>
+                </div>
+                
                 <h1 class="hero-title">
-                    Bonjour, je suis <span class="highlight">Razi Sniha</span>
+                    <span class="greeting-text">Bonjour, je suis</span> <span class="highlight typing-effect">Razi Sniha</span>
                 </h1>
-                <p class="hero-subtitle">Développeur passionné et créateur d'expériences numériques</p>
+                <p class="hero-subtitle glitch" data-text="Développeur passionné et créateur d'expériences numériques">Développeur passionné et créateur d'expériences numériques</p>
+                
+                <!-- Tags de spécialisation -->
+                <div class="hero-tags">
+                    <span class="hero-tag"><i class="fas fa-brain"></i> Data Scientist</span>
+                    <span class="hero-tag"><i class="fas fa-robot"></i> AI Engineer</span>
+                    <span class="hero-tag"><i class="fas fa-chart-line"></i> ML Expert</span>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <div class="stat-value">1+</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="stat-value">30+</div>
+                        <div class="stat-label">Projets complétés</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Satisfaction client</div>
+                    </div>
+                </div>
+                
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    <a href="#projects" class="btn btn-primary btn-modern">
+                        <span>Voir mes projets</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-modern">
+                        <span>Me contacter</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                
+                <!-- Compétences clés avec icônes -->
+                <div class="hero-skills">
+                    <div class="skill-badge" title="Python Expert">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-badge" title="TensorFlow">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="skill-badge" title="Machine Learning">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="skill-badge" title="Computer Vision">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="skill-badge" title="Deep Learning">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator">
+                    <div class="mouse"></div>
+                    <p>Scroll down</p>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-avatar">
+                <div class="hero-avatar floating">
                     <!-- Photo de profil -->
                     <img src="images/profile.jpg" alt="Razi Sniha" id="profile-img" class="profile-media active">
                     
@@ -74,21 +160,16 @@
                         Votre navigateur ne supporte pas les vidéos HTML5.
                     </video>
                     
-                    <!-- Contrôles pour basculer entre photo et vidéo -->
-                    <div class="media-controls">
-                        <button id="toggle-photo" class="media-btn active" title="Afficher la photo">
-                            <i class="fas fa-camera"></i>
-                        </button>
-                        <button id="toggle-video" class="media-btn" title="Afficher la vidéo">
-                            <i class="fas fa-video"></i>
-                        </button>
-                    </div>
+                    <!-- Orbiting circles -->
+                    <div class="orbit-circle orbit-1"></div>
+                    <div class="orbit-circle orbit-2"></div>
+                    <div class="orbit-circle orbit-3"></div>
                     
                     <!-- Overlay avec informations -->
                     <div class="profile-overlay">
                         <div class="profile-info">
                             <h3>Razi Sniha</h3>
-                            <p>Développeur Passionné</p>
+                            <p>Junior Ingénieur</p>
                         </div>
                     </div>
                 </div>
@@ -99,8 +180,12 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">À propos de moi</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    À propos de moi
+                    <span class="title-line"></span>
+                </h2>
                 <p class="section-subtitle">Découvrez mon parcours et ma passion</p>
             </div>
             <div class="about-content">
@@ -118,33 +203,148 @@
                         de rejoindre une équipe innovante où je peux continuer à apprendre tout en contribuant à des
                         projets d’envergure.
                     </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Localisation</span>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>Email disponible</span>
+                        <div class="stat-number" data-target="20">30+</div>
+                        <div class="stat-label">Projets complétés</div>
+                        <div class="stat-progress">
+                            <div class="stat-progress-bar"></div>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>Téléphone disponible</span>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-number" data-target="100">90</div>
+                        <div class="stat-label">Satisfaction </div>
+                        <div class="stat-progress">
+                            <div class="stat-progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-number" data-target="3">20+</div>
+                        <div class="stat-label">Hackathons participés</div>
+                        <div class="stat-progress">
+                            <div class="stat-progress-bar"></div>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projets complétés</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Satisfaction client</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Années d'expérience</div>
+            </div>
+            
+            <!-- Nouvelle section : Expérience & Formation -->
+            <div class="experience-education" style="margin-top: 60px;">
+                <div class="timeline-section" data-aos="fade-up">
+                    <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center;">
+                        <i class="fas fa-graduation-cap"></i> Formation & Expérience
+                    </h3>
+                    
+                    <div class="timeline">
+                        <!-- Formation ESPRIT -->
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Diplôme d'Ingénieur en Informatique</h4>
+                                <p class="timeline-subtitle">
+                                    <i class="fas fa-map-marker-alt"></i> ESPRIT - École Supérieure Privée d'Ingénierie et de Technologies
+                                </p>
+                                <p class="timeline-date">
+                                    <i class="fas fa-calendar"></i> 2020 - 2024
+                                </p>
+                                <p class="timeline-description">
+                                    Spécialisation en Data Science et Intelligence Artificielle. 
+                                    Formation complète en ML, Deep Learning, Computer Vision et développement logiciel.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Data Science</span>
+                                    <span class="tag">IA</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Machine Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projet de fin d'études -->
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Projet de Fin d'Études - NeuroWatts</h4>
+                                <p class="timeline-subtitle">
+                                    <i class="fas fa-building"></i> Projet Innovant
+                                </p>
+                                <p class="timeline-date">
+                                    <i class="fas fa-calendar"></i> 2024
+                                </p>
+                                <p class="timeline-description">
+                                    Développement d'une plateforme intelligente de monitoring énergétique utilisant 
+                                    XGBoost pour la prédiction, RAG + LLM pour l'analyse, et MobileNetV2 pour le traitement d'images.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">XGBoost</span>
+                                    <span class="tag">LLM</span>
+                                    <span class="tag">Deep Learning</span>
+                                    <span class="tag">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hackathons -->
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="timeline-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Participation aux Hackathons</h4>
+                                <p class="timeline-subtitle">
+                                    <i class="fas fa-users"></i> Compétitions & Défis Techniques
+                                </p>
+                                <p class="timeline-date">
+                                    <i class="fas fa-calendar"></i> 2022 - 2024
+                                </p>
+                                <p class="timeline-description">
+                                    Participation active à plus de 20 hackathons, développement de solutions innovantes 
+                                    sous pression, travail en équipe et résolution de problèmes complexes.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Innovation</span>
+                                    <span class="tag">Travail d'équipe</span>
+                                    <span class="tag">Créativité</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certifications & Compétences -->
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                            <div class="timeline-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Compétences & Certifications</h4>
+                                <p class="timeline-subtitle">
+                                    <i class="fas fa-book-reader"></i> Formation Continue
+                                </p>
+                                <p class="timeline-description">
+                                    Expert en Python, TensorFlow, PyTorch, Scikit-learn. 
+                                    Kaggle competitor et contributeur open-source. 
+                                    Membre actif de l'IEEE.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Kaggle</span>
+                                    <span class="tag">IEEE Member</span>
+                                    <span class="tag">Open Source</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,13 +354,17 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes compétences</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Mes compétences
+                    <span class="title-line"></span>
+                </h2>
                 <p class="section-subtitle">Compétences techniques et domaines d'expertise</p>
             </div>
 
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>🧠 Intelligence Artificielle & Machine Learning</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-brain"></i><span>Modélisation prédictive (régression, classification)</span></div>
@@ -172,7 +376,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>📊 Data Science & Data Engineering</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-database"></i><span>Nettoyage, transformation, feature engineering</span></div>
@@ -182,7 +386,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3>⚡ Spécialisation Énergie & Smart Systems</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-bolt"></i><span>Prédiction consommation énergétique (court/moyen/long terme)</span></div>
@@ -192,7 +396,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <h3>🧩 Développement logiciel & Backend</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fab fa-python"></i><span>Python (expert) — FastAPI / Flask / Django</span></div>
@@ -202,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>🤖 Computer Vision</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-camera"></i><span>OpenCV — traitement d'images & vidéo</span></div>
@@ -212,7 +416,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>🗄️ Bases de données</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-database"></i><span>SQL (MySQL, PostgreSQL)</span></div>
@@ -221,7 +425,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3>☁️ Cloud & DevOps</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fab fa-google"></i><span>Google Cloud, Azure</span></div>
@@ -230,7 +434,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <h3>📱 Mobile & 3D (basique)</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fab fa-android"></i><span>Flutter (intégration modèles, .glb)</span></div>
@@ -238,7 +442,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>🧩 Compétences transversales & Points forts</h3>
                     <div class="skills-list">
                         <div class="skill-item"><i class="fas fa-lightbulb"></i><span>Résolution de problèmes complexes</span></div>
@@ -251,16 +455,171 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Certifications & Accomplissements
+                    <span class="title-line"></span>
+                </h2>
+                <p class="section-subtitle">Mes formations et certifications professionnelles</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <!-- Natural Language Processing Certificates -->
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Natural Language Processing Specialization</h3>
+                        <p class="cert-issuer"><i class="fas fa-university"></i> DeepLearning.AI</p>
+                        <div class="cert-buttons-list">
+                            <a href="certif/Natural Language Processing with Classification.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>NLP with Classification and Vector Spaces</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/Natural Language Processing with Probabilistic.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>NLP with Probabilistic Models</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/Natural Language Processing with Sequence.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>NLP with Sequence Models</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/Natural Language Processing with Attention.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>NLP with Attention Models</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformer-Based NLP -->
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Building Transformer-Based NLP Applications</h3>
+                        <p class="cert-issuer"><i class="fas fa-university"></i> NVIDIA Deep Learning Institute</p>
+                        <p class="cert-description">Formation avancée sur les architectures Transformer et leur application dans les systèmes NLP modernes.</p>
+                        <a href="certif/Building Transformer-Based Natural Language Processing Applications.pdf" class="cert-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Voir le certificat
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Microsoft Azure Certificates -->
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Microsoft Azure Cloud Services</h3>
+                        <p class="cert-issuer"><i class="fas fa-cloud"></i> Microsoft</p>
+                        <div class="cert-buttons-list">
+                            <a href="certif/Introduction to Microsoft Azure Cloud Services.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>Introduction to Azure Cloud Services</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/Microsoft Azure Management Tools and Security.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>Azure Management Tools and Security</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/Microsoft Azure Services and Lifecycles.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>Azure Services and Lifecycles</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IEEE Membership & Achievement -->
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">IEEE Membership & Recognition</h3>
+                        <p class="cert-issuer"><i class="fas fa-medal"></i> IEEE - Institute of Electrical and Electronics Engineers</p>
+                        <div class="cert-buttons-list">
+                            <a href="certif/Certificate of IEEE membership.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>IEEE Member - Active Participation</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/CERTIFICATE of ACHIEVEMENT IEEE.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>Certificate of Achievement</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="certif/certificate of IEEE Volunteering.pdf" class="cert-button-item" target="_blank">
+                                <i class="fas fa-file-certificate"></i>
+                                <span>IEEE Volunteering Certificate</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honoris Sustainability -->
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Sustainability, Work Ethics & Gender Equity</h3>
+                        <p class="cert-issuer"><i class="fas fa-globe"></i> Honoris United Universities</p>
+                        <p class="cert-description">Formation sur le développement durable, l'éthique professionnelle et l'égalité des genres dans le monde professionnel.</p>
+                        <a href="certif/Honoris Sustainability, Work Ethics & Gender Equity Certificate.pdf" class="cert-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Voir le certificat
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="cert-stats">
+                <div class="cert-stat-item">
+                    <div class="cert-stat-number">12+</div>
+                    <div class="cert-stat-label">Certifications</div>
+                </div>
+                <div class="cert-stat-item">
+                    <div class="cert-stat-number">5+</div>
+                    <div class="cert-stat-label">Institutions</div>
+                </div>
+                <div class="cert-stat-item">
+                    <div class="cert-stat-number">100%</div>
+                    <div class="cert-stat-label">Formation Continue</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes projets</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Mes projets
+                    <span class="title-line"></span>
+                </h2>
                 <p class="section-subtitle">Découvrez mes réalisations récentes</p>
             </div>
             <div class="projects-grid">
                 <!-- Projet 1 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="project-image">
                         <img src="images/Capture.PNG" alt="Projet 1">
                         <div class="project-overlay">
@@ -294,7 +653,7 @@
                 </div>
 
                 <!-- Projet 2 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="project-image">
                         <img src="images/projet2.PNG" alt="Projet 2">
                         <div class="project-overlay">
@@ -328,7 +687,7 @@
                 </div>
 
                 <!-- Projet 3 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="project-image">
                             <img src="images/image.png" alt="Projet Sahali">
                             <div class="project-overlay">
@@ -366,44 +725,64 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">Entrons en contact — envoyez-moi un message</p>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Entrons en contact
+                    <span class="title-line"></span>
+                </h2>
+                <p class="section-subtitle">N'hésitez pas à me contacter pour toute opportunité ou collaboration</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h4>Localisation</h4>
-                    <p>France</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            
+            <div class="contact-modern-grid">
+                <!-- Carte Localisation -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
+                    <h3>Localisation</h3>
+                    <p>Ariana, Tunisie</p>
                 </div>
 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Nom complet</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Adresse email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
-                            <label for="subject">Sujet</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" required></textarea>
-                            <label for="message">Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <span>Envoyer le message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <!-- Carte Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:razi.sniha@esprit.tn">razi.sniha@esprit.tn</a></p>
+                    <p><a href="mailto:razisniha@ieee.org">razisniha@ieee.org</a></p>
+                </div>
+
+                <!-- Carte Téléphone -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+21626995933">+216 26 995 933</a></p>
+                </div>
+            </div>
+
+            <!-- Réseaux Sociaux -->
+            <div class="social-section">
+                <h3>Suivez-moi sur les réseaux sociaux</h3>
+                <div class="social-links-modern">
+                    <a href="https://github.com/RaziSnihaa" class="social-icon-modern" target="_blank" rel="noopener" title="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/razi-sniha-a8922a275/" class="social-icon-modern" target="_blank" rel="noopener" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/razi_sniha/?hl=fr" class="social-icon-modern" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-icon-modern" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -414,11 +793,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2024 Razi Sniha. Tous droits réservés.</p>
+                    <p>&copy; 2026 Razi Sniha. Tous droits réservés.</p>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Accueil</a>
                     <a href="#about">À propos</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#projects">Projets</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -427,6 +808,10 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/chatbot.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/script-modern.js"></script>
 </body>
 </html>

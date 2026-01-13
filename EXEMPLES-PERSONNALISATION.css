@@ -1,0 +1,437 @@
+/* ========================================
+   🎨 EXEMPLES DE PERSONNALISATIONS RAPIDES
+   Copiez-collez ces exemples dans style-modern.css
+   ======================================== */
+
+/* ============================================
+   🌈 THÈMES DE COULEURS ALTERNATIFS
+   Remplacez les variables :root existantes
+   ============================================ */
+
+/* THÈME CYBER FUTURISTE (Bleu/Cyan) */
+:root {
+    --neon-blue: #00ffff;
+    --neon-pink: #ff00ff;
+    --neon-purple: #9d4edd;
+    --neon-green: #39ff14;
+}
+
+/* THÈME SUNSET (Orange/Rose) */
+:root {
+    --neon-blue: #ff6b6b;
+    --neon-pink: #ffd93d;
+    --neon-purple: #ee6c4d;
+    --neon-green: #98d8c8;
+}
+
+/* THÈME FOREST (Vert/Émeraude) */
+:root {
+    --neon-blue: #2ec4b6;
+    --neon-pink: #e71d36;
+    --neon-purple: #6a4c93;
+    --neon-green: #52b788;
+}
+
+/* THÈME ROYAL (Or/Violet) */
+:root {
+    --neon-blue: #ffbe0b;
+    --neon-pink: #fb5607;
+    --neon-purple: #8338ec;
+    --neon-green: #3a86ff;
+}
+
+/* ============================================
+   ✨ EFFETS DE HOVER ALTERNATIFS
+   Ajoutez après les styles existants
+   ============================================ */
+
+/* Effet de Soulèvement 3D Plus Prononcé */
+.project-card:hover {
+    transform: translateY(-20px) rotateX(5deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet de Zoom et Rotation */
+.skill-category:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Effet de Pulse Sur les Stats */
+.stat-item:hover {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ============================================
+   🎭 ANIMATIONS DE TEXTE ALTERNATIVES
+   ============================================ */
+
+/* Texte qui Ondule */
+.hero-title {
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    75% { transform: translateY(10px); }
+}
+
+/* Texte qui Pulse avec Couleurs */
+.highlight {
+    animation: color-pulse 3s infinite;
+}
+
+@keyframes color-pulse {
+    0%, 100% { 
+        background: linear-gradient(45deg, #f59e0b, #ef4444);
+        -webkit-background-clip: text;
+    }
+    50% { 
+        background: linear-gradient(45deg, #10b981, #3b82f6);
+        -webkit-background-clip: text;
+    }
+}
+
+/* ============================================
+   🌟 EFFETS DE BACKGROUND ALTERNATIFS
+   ============================================ */
+
+/* Background Animé avec Vagues */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: waves 10s ease-in-out infinite;
+}
+
+@keyframes waves {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Background Mesh Gradient */
+.about {
+    background: 
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.3) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.3) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.3) 0px, transparent 50%);
+}
+
+/* ============================================
+   💫 BOUTONS ALTERNATIFS
+   ============================================ */
+
+/* Bouton avec Effet Néon */
+.btn-modern {
+    position: relative;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 
+        0 0 10px var(--neon-blue),
+        inset 0 0 10px var(--neon-blue);
+}
+
+.btn-modern:hover {
+    box-shadow: 
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        inset 0 0 20px var(--neon-blue);
+}
+
+/* Bouton avec Effet de Glitch */
+.btn-modern:hover {
+    animation: btn-glitch 0.3s infinite;
+}
+
+@keyframes btn-glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* ============================================
+   🎯 CARDS ALTERNATIVES
+   ============================================ */
+
+/* Card avec Bordure Lumineuse */
+.project-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Card avec Effet de Scanner */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: scan 3s infinite;
+}
+
+@keyframes scan {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+/* ============================================
+   🔥 EFFETS DE PARTICULES PERSONNALISÉS
+   JavaScript - À ajouter dans script-modern.js
+   ============================================ */
+
+/* 
+// Particules en forme de cœur
+draw() {
+    this.particles.forEach(particle => {
+        this.ctx.beginPath();
+        // Dessiner un cœur
+        this.ctx.moveTo(particle.x, particle.y);
+        this.ctx.bezierCurveTo(
+            particle.x, particle.y - 3,
+            particle.x - 5, particle.y - 3,
+            particle.x - 5, particle.y
+        );
+        this.ctx.bezierCurveTo(
+            particle.x - 5, particle.y + 3,
+            particle.x, particle.y + 7,
+            particle.x, particle.y + 10
+        );
+        this.ctx.fillStyle = 'rgba(255, 0, 100, 0.8)';
+        this.ctx.fill();
+    });
+}
+
+// Particules avec traînée
+draw() {
+    // Ne pas effacer complètement le canvas
+    this.ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    
+    // Dessiner les particules (code normal)
+}
+
+// Particules arc-en-ciel
+draw() {
+    this.particles.forEach((particle, i) => {
+        const hue = (i * 360 / this.particles.length) % 360;
+        this.ctx.fillStyle = `hsla(${hue}, 100%, 50%, 0.8)`;
+        // ... reste du code
+    });
+}
+*/
+
+/* ============================================
+   ⚡ PERFORMANCES - Optimisations
+   ============================================ */
+
+/* Désactiver les animations sur scroll rapide */
+.disable-hover * {
+    pointer-events: none !important;
+}
+
+/* Réduire les effets sur mobile */
+@media (max-width: 768px) {
+    /* Désactiver les particules */
+    #particles-canvas,
+    #matrix-canvas {
+        display: none;
+    }
+    
+    /* Simplifier les animations */
+    .orbit-circle {
+        display: none;
+    }
+    
+    /* Réduire les ombres */
+    .project-card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* ============================================
+   🎨 MODE SOMBRE / CLAIR
+   ============================================ */
+
+/* Définir les variables pour les deux modes */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --text-primary: #1f2937;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a202c;
+    --text-primary: #f9fafb;
+    --shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Bouton de toggle (à ajouter dans le HTML) */
+.theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* ============================================
+   🎵 EFFETS SONORES (JavaScript)
+   À ajouter dans script-modern.js
+   ============================================ */
+
+/*
+// Effet sonore au clic
+const clickSound = new Audio('sounds/click.mp3');
+
+document.querySelectorAll('.btn, .nav-link').forEach(el => {
+    el.addEventListener('click', () => {
+        clickSound.currentTime = 0;
+        clickSound.play();
+    });
+});
+
+// Musique de fond (optionnelle)
+const bgMusic = new Audio('sounds/background.mp3');
+bgMusic.loop = true;
+bgMusic.volume = 0.3;
+
+// Ajouter un bouton pour contrôler la musique
+document.querySelector('.music-toggle').addEventListener('click', () => {
+    if (bgMusic.paused) {
+        bgMusic.play();
+    } else {
+        bgMusic.pause();
+    }
+});
+*/
+
+/* ============================================
+   🎊 CONFETTIS (JavaScript)
+   Installer: npm install canvas-confetti
+   ============================================ */
+
+/*
+import confetti from 'canvas-confetti';
+
+// Confettis au chargement de la page
+window.addEventListener('load', () => {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+});
+
+// Confettis sur clic d'un bouton
+document.querySelector('.celebration-btn').addEventListener('click', () => {
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        colors: ['#667eea', '#764ba2', '#f59e0b']
+    });
+});
+*/
+
+/* ============================================
+   📊 GRAPHIQUES ANIMÉS (Chart.js)
+   ============================================ */
+
+/*
+// Dans le HTML, ajouter :
+<canvas id="skillsChart"></canvas>
+
+// JavaScript :
+const ctx = document.getElementById('skillsChart').getContext('2d');
+new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['Python', 'ML', 'AI', 'Data Science', 'Web Dev'],
+        datasets: [{
+            label: 'Compétences',
+            data: [95, 90, 85, 88, 80],
+            backgroundColor: 'rgba(102, 126, 234, 0.2)',
+            borderColor: 'rgba(102, 126, 234, 1)',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+*/
+
+/* ============================================
+   💡 ASTUCES FINALES
+   ============================================ */
+
+/*
+1. TESTEZ toujours après chaque modification
+2. GARDEZ des sauvegardes de vos fichiers
+3. UTILISEZ les DevTools pour débugger (F12)
+4. OPTIMISEZ les images (TinyPNG, ImageOptim)
+5. VALIDEZ votre code (W3C Validator)
+6. TESTEZ sur différents navigateurs
+7. VÉRIFIEZ la performance (Lighthouse)
+8. AJOUTEZ des métadonnées SEO
+9. SÉCURISEZ avec HTTPS
+10. PROFITEZ de votre portfolio ! 🚀
+*/

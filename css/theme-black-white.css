@@ -1,0 +1,495 @@
+/* ===================================
+   🎨 THÈME NOIR & BLANC ÉLÉGANT
+   Portfolio Minimaliste et Professionnel
+   =================================== */
+
+/* ==================== VARIABLES NOIR & BLANC ==================== */
+:root {
+    /* Couleurs principales */
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --gray-900: #0a0a0a;
+    --gray-800: #1a1a1a;
+    --gray-700: #2a2a2a;
+    --gray-600: #3a3a3a;
+    --gray-500: #5a5a5a;
+    --gray-400: #7a7a7a;
+    --gray-300: #9a9a9a;
+    --gray-200: #c0c0c0;
+    --gray-100: #e0e0e0;
+    --gray-50: #f5f5f5;
+    
+    /* Gradients élégants */
+    --primary-gradient: linear-gradient(135deg, #000000 0%, #3a3a3a 100%);
+    --secondary-gradient: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    --glass-gradient: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Ombres sophistiquées */
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.3);
+    
+    /* Effets néon N&B */
+    --neon-white: #ffffff;
+    --neon-black: #000000;
+}
+
+/* ==================== OVERRIDE HERO SECTION ==================== */
+.hero {
+    background: var(--primary-black) !important;
+    animation: none !important;
+}
+
+.hero::before {
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px) !important;
+    background-size: 40px 40px !important;
+}
+
+#matrix-canvas {
+    opacity: 0.15 !important;
+    filter: grayscale(1) !important;
+}
+
+/* ==================== TEXTES ==================== */
+.hero-title,
+.hero-subtitle,
+.hero-subtitle.glitch {
+    color: var(--primary-white) !important;
+    text-shadow: none !important;
+}
+
+.highlight,
+.typing-effect {
+    background: linear-gradient(45deg, #ffffff, #c0c0c0) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.glitch::before {
+    text-shadow: -2px 0 var(--gray-300) !important;
+    opacity: 0.3 !important;
+}
+
+.glitch::after {
+    text-shadow: -2px 0 var(--gray-400) !important;
+    opacity: 0.3 !important;
+}
+
+/* ==================== BOUTONS ==================== */
+.btn-primary {
+    background: var(--primary-white) !important;
+    color: var(--primary-black) !important;
+    border: 2px solid var(--primary-white) !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-black) !important;
+    color: var(--primary-white) !important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: var(--primary-white) !important;
+    border: 2px solid var(--primary-white) !important;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-white) !important;
+    color: var(--primary-black) !important;
+}
+
+/* ==================== AVATAR & ORBITS ==================== */
+.hero-avatar {
+    border: 5px solid var(--primary-white) !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3) !important;
+    background: linear-gradient(45deg, var(--gray-800), var(--gray-600)) !important;
+}
+
+.orbit-1 {
+    background: var(--primary-white) !important;
+    box-shadow: 0 0 20px var(--primary-white) !important;
+}
+
+.orbit-2 {
+    background: var(--gray-300) !important;
+    box-shadow: 0 0 20px var(--gray-300) !important;
+}
+
+.orbit-3 {
+    background: var(--gray-500) !important;
+    box-shadow: 0 0 20px var(--gray-500) !important;
+}
+
+/* ==================== SCROLL INDICATOR ==================== */
+.scroll-indicator {
+    color: var(--primary-white) !important;
+}
+
+.mouse {
+    border-color: var(--primary-white) !important;
+}
+
+.mouse::before {
+    background: var(--primary-white) !important;
+}
+
+/* ==================== SECTIONS ==================== */
+.about, .skills, .projects, .contact {
+    background: var(--primary-white) !important;
+    color: var(--primary-black) !important;
+}
+
+.section-title {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.title-line {
+    background: var(--primary-gradient) !important;
+}
+
+/* ==================== STATS ==================== */
+.stat-item {
+    background: var(--gray-50) !important;
+    border: 2px solid var(--gray-200) !important;
+    color: var(--primary-black) !important;
+}
+
+.stat-item:hover {
+    background: var(--primary-black) !important;
+    color: var(--primary-white) !important;
+    border-color: var(--primary-black) !important;
+    transform: translateY(-10px) scale(1.05) !important;
+}
+
+.stat-icon {
+    background: var(--primary-gradient) !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.stat-number {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.stat-item:hover .stat-icon {
+    background: var(--primary-white) !important;
+    color: var(--primary-black) !important;
+}
+
+.stat-item:hover .stat-number {
+    background: var(--secondary-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.stat-progress-bar {
+    background: var(--primary-gradient) !important;
+}
+
+/* ==================== CARDS ==================== */
+.project-card,
+.skill-category {
+    background: var(--gray-50) !important;
+    border: 2px solid var(--gray-200) !important;
+    color: var(--primary-black) !important;
+}
+
+.project-card:hover,
+.skill-category:hover {
+    background: var(--primary-white) !important;
+    color: var(--primary-black) !important;
+    border-color: var(--primary-black) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.project-card::before,
+.skill-category::before {
+    background: conic-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.3),
+        transparent 30%
+    ) !important;
+}
+
+.skill-category:hover h3,
+.skill-category:hover .skill-item,
+.skill-category:hover .skill-item span,
+.skill-category:hover .skill-item i {
+    color: var(--primary-black) !important;
+}
+
+.project-card:hover .project-title,
+.project-card:hover .project-description,
+.project-card:hover .project-title a {
+    color: var(--primary-white) !important;
+}
+
+/* ==================== TECH TAGS ==================== */
+.tech-tag {
+    background: var(--gray-100) !important;
+    border: 1px solid var(--gray-300) !important;
+    color: var(--primary-black) !important;
+}
+
+.tech-tag:hover {
+    background: var(--primary-black) !important;
+    color: var(--primary-white) !important;
+    border-color: var(--primary-black) !important;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid var(--gray-200) !important;
+}
+
+.nav-link {
+    color: var(--primary-black) !important;
+}
+
+.nav-link::before {
+    background: var(--primary-black) !important;
+}
+
+.nav-logo a {
+    color: var(--primary-black) !important;
+}
+
+/* ==================== FORMULAIRE ==================== */
+.form-group input,
+.form-group textarea {
+    background: var(--gray-50) !important;
+    border: 2px solid var(--gray-200) !important;
+    color: var(--primary-black) !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-black) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important;
+    background: var(--primary-white) !important;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background: var(--gray-900) !important;
+    color: var(--primary-white) !important;
+}
+
+.footer-links a {
+    color: var(--gray-300) !important;
+}
+
+.footer-links a:hover {
+    color: var(--primary-white) !important;
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-600);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-black);
+}
+
+/* ==================== ANIMATIONS SUPPLÉMENTAIRES ==================== */
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ==================== EFFET GRAIN (optionnel) ==================== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.03"/></svg>');
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.5;
+}
+
+/* ==================== EASTER EGG - BOUTON CACHÉ ==================== */
+.secret-game-trigger {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--gray-800);
+    border: 2px solid var(--gray-600);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-white);
+    transition: all 0.3s ease;
+    z-index: 9998;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.secret-game-trigger:hover {
+    background: var(--primary-white);
+    color: var(--primary-black);
+    transform: scale(1.1) rotate(360deg);
+}
+
+/* ==================== MODAL JEUX ==================== */
+.game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.game-modal.active {
+    display: flex;
+}
+
+.game-container {
+    background: var(--gray-900);
+    border: 3px solid var(--primary-white);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+}
+
+.game-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-white);
+    color: var(--primary-black);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.game-close:hover {
+    transform: rotate(90deg);
+    background: var(--primary-black);
+    color: var(--primary-white);
+}
+
+.game-title {
+    color: var(--primary-white);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#snake-canvas {
+    border: 3px solid var(--primary-white);
+    background: var(--gray-800);
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.game-score {
+    color: var(--primary-white);
+    font-size: 1.5rem;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.game-controls {
+    color: var(--gray-300);
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.game-start-btn {
+    background: var(--primary-white);
+    color: var(--primary-black);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.game-start-btn:hover {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .secret-game-trigger {
+        bottom: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .game-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .game-title {
+        font-size: 1.8rem;
+    }
+    
+    #snake-canvas {
+        width: 280px !important;
+        height: 280px !important;
+    }
+}

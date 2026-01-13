@@ -253,6 +253,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     position: absolute;
     top: 0;
     left: 0;
@@ -381,7 +382,11 @@ section {
 .about-text h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
 .about-text p {
@@ -463,7 +468,8 @@ section {
 .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 25px;
-    color: var(--text-primary);
+    color: #1f2937;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -479,7 +485,8 @@ section {
     align-items: center;
     gap: 8px;
     padding: 20px;
-    background: var(--background-light);
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
     border-radius: 8px;
     transition: var(--transition);
 }
@@ -500,8 +507,10 @@ section {
 }
 
 .skill-item span {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
+    color: #374151;
+    text-align: center;
 }
 
 /* Projects Section */
