@@ -18,7 +18,7 @@ const translations = {
         hero: {
             status: "Disponible pour des opportunités",
             greeting: "Bonjour, je suis",
-            subtitle: "Développeur passionné et créateur d'expériences numériques",
+            subtitle: "Ingénieur Data Science | IA & Machine Learning",
             tags: {
                 dataScientist: "Data Scientist",
                 aiEngineer: "AI Engineer",
@@ -230,7 +230,7 @@ const translations = {
         hero: {
             status: "Available for opportunities",
             greeting: "Hello, I'm",
-            subtitle: "Passionate developer and creator of digital experiences",
+            subtitle: "Data Science Engineer | AI & Machine Learning",
             tags: {
                 dataScientist: "Data Scientist",
                 aiEngineer: "AI Engineer",
